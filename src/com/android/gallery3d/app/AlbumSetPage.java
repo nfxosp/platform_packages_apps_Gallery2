@@ -134,7 +134,7 @@ public class AlbumSetPage extends ActivityState implements
 
             int slotViewTop = mActionBar.getHeight() + mConfig.paddingTop;
             int slotViewBottom = bottom - top - mConfig.paddingBottom;
-            int slotViewRight = right - left - mConfig.paddingRight;
+            int slotViewRight = right - left;
 
             if (mShowDetails) {
                 mDetailsHelper.layout(left, slotViewTop, right, bottom);
@@ -142,7 +142,7 @@ public class AlbumSetPage extends ActivityState implements
                 mAlbumSetView.setHighlightItemPath(null);
             }
 
-            mSlotView.layout(mConfig.paddingLeft, slotViewTop, slotViewRight, slotViewBottom);
+            mSlotView.layout(0, slotViewTop, slotViewRight, slotViewBottom);
         }
 
         @Override
